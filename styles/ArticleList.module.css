@@ -1,0 +1,34 @@
+.Container {
+  padding: 40px 24px;
+}
+.Container_Inner {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .Container {
+    padding: 60px;
+  }
+  .Container_Inner {
+    max-width: 980px;
+  }
+}
+@media (min-width: 960px) {
+  .Container_Inner {
+    display: flex;
+  }
+}
+.Articles {
+  flex: 1;
+}
+.Articles_Heading {
+  font-size: 2rem;
+  margin: 0 0 42px;
+  padding: 0;
+  line-height: 1.4;
+}
+@media (min-width: 960px) {
+  .Articles {
+    margin: 0 40px 0 0;
+  }
+}

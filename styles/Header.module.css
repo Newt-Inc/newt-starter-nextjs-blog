@@ -1,0 +1,73 @@
+.Header {
+  background: #fff;
+  padding: 8px 8px 8px 14px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.Header_Inner {
+  min-width: 0;
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 600px) {
+  .Header {
+    padding: 8px 40px;
+  }
+}
+.Title {
+  display: flex;
+  margin: 0 auto 0 0;
+  align-items: center;
+  min-width: 0;
+  color: #333;
+  text-decoration: none;
+}
+.Title_Icon {
+  width: 20px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  margin: 0 10px -2px 0;
+}
+.Title_Icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
+  font-family: 'object-fit: cover'; /* IE11 */
+  border-radius: 4px;
+}
+.Title_Text {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Link {
+  border-right: 1px solid #e5e5e5;
+  padding: 0 8px 0 0;
+  margin: 0 12px 0 0;
+}
+.Link > a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 3px 12px;
+}
+.Link > a:hover {
+  color: #333;
+}

@@ -1,0 +1,140 @@
+.Article {
+  display: block;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.Article:last-child {
+  margin: 0 0 28px 0;
+}
+.Article_Eyecatch {
+  width: 100%;
+  height: 0;
+  padding: 52.5% 0 0 0;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin: 0 0 12px 0;
+  position: relative;
+}
+.Article_Eyecatch > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Article_EyecatchEmpty {
+  background: #f8f8f8;
+  width: 280px;
+  height: 147px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Article_Data {
+  flex: 1;
+}
+.Article_Title {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin: 0 0 10px;
+  padding: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.Article_Tags {
+  margin: 0 0 8px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Article_Tags li {
+  margin: 0 4px 4px 0;
+  padding: 0 4px;
+  list-style: none;
+  font-size: 1.2rem;
+  color: #888;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+.Article_Author {
+  display: flex;
+  align-items: center;
+}
+.Article_Author > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin: 0 12px 0 0;
+  flex-shrink: 0;
+}
+.Article_Author img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  font-family: "object-fit: cover"; /* IE11 */
+}
+.Article_AuthorEmpty {
+  width: 32px;
+  height: 32px;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin: 0 12px 0 0;
+  flex-shrink: 0;
+}
+.Article_AuthorData {
+  flex: 1;
+}
+.Article_AuthorData span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1.5;
+}
+.Article_AuthorData time {
+  font-size: 1.2rem;
+  display: block;
+  color: #888;
+  line-height: 1.5;
+}
+@media (min-width: 600px) {
+  .Article {
+    display: flex;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 0 36px;
+    margin: 0 0 36px;
+  }
+  .Article:hover .Article_Title {
+    text-decoration: underline;
+  }
+  .Article:last-child {
+    border-bottom: none;
+    padding: 0 0 20px 0;
+  }
+  .Article_Eyecatch {
+    width: 280px;
+    height: 147px;
+    margin: 0 28px 0 0;
+    padding: 0;
+  }
+  .Article_Eyecatch img {
+    width: 280px;
+    height: 147px;
+  }
+  .Article_Title {
+    margin: 0 0 12px;
+  }
+  .Article_Tags {
+    margin: 0 0 16px;
+  }
+}

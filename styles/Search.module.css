@@ -1,0 +1,88 @@
+.Container {
+  flex: 1;
+  display: flex;
+}
+.Search {
+  margin: 0 auto;
+  padding: 24px;
+  width: 100%;
+}
+.Search_Text {
+  padding: 0;
+  margin: 0;
+}
+.Search_Results {
+  padding: 24px 0 0 0;
+}
+.Article {
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin: 0 0 16px 0;
+}
+.Article_Link {
+  display: block;
+  padding: 16px;
+  line-height: 1.5;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background: #fff;
+}
+.Article_Link:hover {
+  background: #f8f8f8;
+}
+.Article_Link:active {
+  background: none;
+  transition: none;
+}
+.Article_Title {
+  font-size: 1.4rem;
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+.Article_Description {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+@media (min-width: 600px) {
+  .Search {
+    max-width: 700px;
+    padding: 60px;
+  }
+  .Search_Text {
+    padding: 0;
+  }
+  .Search_Results {
+    padding: 24px 0 0 0;
+  }
+}
+.Empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.Empty_Emoji {
+  font-size: 4rem;
+  line-height: 1;
+  margin: 0 0 16px 0;
+}
+.Empty_Title {
+  font-size: 1.8rem;
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+.Empty_Description {
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
