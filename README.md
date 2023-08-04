@@ -7,7 +7,7 @@
 Newt's starter
 </h3>
 <p align="center">
-  <a href="https://demo-newt-blog-starter-nextjs.vercel.app/">Demo</a> | <a href="https://www.newt.so/">Newt</a>
+  <a href="https://newt-starter-nextjs-blog.vercel.app/">Demo</a> | <a href="https://www.newt.so/">Newt</a>
 </p>
 
 ## 概要
@@ -74,15 +74,15 @@ $ npm run dev
 
 ## ページの構成
 
-| ページ                   | パス                                                                                             | ファイル                                                                              |
-| ------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| 一覧                     | /                                                                                                | [ソース](https://github.com/y-meguro/newt-starter-nextjs-blog/blob/main/app/page.tsx) |
-| 一覧<br>（ページ遷移時） | /page/1・/page/2...                                                                              | ソース                                                                                |
-| タグで絞り込み           | /tags/developers<br>/tags/developers/1・/tags/developers/2…（ページ遷移時）                      | ソース                                                                                |
-| 年で絞り込み             | /archives/2023<br>/archives/2023/1・/archives/2023/2…（ページ遷移時）                            | ソース                                                                                |
-| 著者で絞り込み           | /authors/donna-thomason<br>/authors/donna-thomason/1・/authors/donna-thomason/2…（ページ遷移時） | ソース                                                                                |
-| 検索                     | /search?q=hoge                                                                                   | ソース                                                                                |
-| 詳細                     | /articles/article-1                                                                              | ソース                                                                                |
+| ページ                   | パス                                                                                             | ファイル                                                                                                                      |
+| ------------------------ | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| 一覧                     | /                                                                                                | [ソース](https://github.com/Newt-Inc/newt-starter-nextjs-blog/blob/main/app/page.tsx)                                         |
+| 一覧<br>（ページ遷移時） | /page/1・/page/2...                                                                              | [ソース](https://github.com/Newt-Inc/newt-starter-nextjs-blog/blob/main/app/page/%5Bpage%5D/page.tsx)                         |
+| タグで絞り込み           | /tags/developers<br>/tags/developers/1・/tags/developers/2…（ページ遷移時）                      | [ソース](https://github.com/Newt-Inc/newt-starter-nextjs-blog/blob/main/app/tags/%5Bslug%5D/%5B%5B...page%5D%5D/page.tsx)     |
+| 年で絞り込み             | /archives/2023<br>/archives/2023/1・/archives/2023/2…（ページ遷移時）                            | [ソース](https://github.com/Newt-Inc/newt-starter-nextjs-blog/blob/main/app/archives/%5Byear%5D/%5B%5B...page%5D%5D/page.tsx) |
+| 著者で絞り込み           | /authors/donna-thomason<br>/authors/donna-thomason/1・/authors/donna-thomason/2…（ページ遷移時） | [ソース](https://github.com/Newt-Inc/newt-starter-nextjs-blog/blob/main/app/authors/%5Bslug%5D/%5B%5B...page%5D%5D/page.tsx)  |
+| 検索結果                 | /search?q=hoge                                                                                   | [ソース](https://github.com/Newt-Inc/newt-starter-nextjs-blog/blob/main/app/search/page.tsx)                                  |
+| 詳細                     | /articles/article-1                                                                              | [ソース](https://github.com/Newt-Inc/newt-starter-nextjs-blog/blob/main/app/articles/%5Bslug%5D/page.tsx)                     |
 
 ## モデルの定義
 
