@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { SearchField } from '@/components/SearchField'
 import { getApp } from '@/lib/newt'
 import styles from '@/styles/Header.module.css'
-import { SearchField } from '@/components/SearchField'
 
 export async function Header() {
   const app = await getApp()
