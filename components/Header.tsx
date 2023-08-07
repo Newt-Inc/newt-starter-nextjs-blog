@@ -24,7 +24,7 @@ export async function Header() {
         </Link>
         <div className={styles.Link}>
           <a
-            href="https://github.com/Newt-Inc/newt-blog2-starter-nextjs"
+            href="https://github.com/Newt-Inc/newt-starter-nextjs-blog"
             rel="noreferrer noopener"
             target="_blank"
           >
