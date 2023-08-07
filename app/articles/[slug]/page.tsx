@@ -4,13 +4,13 @@ import { notFound } from 'next/navigation'
 import { htmlToText } from 'html-to-text'
 import { FacebookShareButton } from '@/components/FacebookShareButton'
 import { TwitterShareButton } from '@/components/TwitterShareButton'
+import { formatDate } from '@/lib/date'
 import {
   getArticles,
   getArticle,
   getPreviousArticle,
   getNextArticle,
 } from '@/lib/newt'
-import { formatDate } from '@/lib/date'
 import styles from '@/styles/Article.module.css'
 
 type Props = {
