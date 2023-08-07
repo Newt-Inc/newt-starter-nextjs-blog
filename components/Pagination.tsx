@@ -1,7 +1,7 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import { useMemo } from 'react'
 import styles from '@/styles/Pagination.module.css'
-import { useRouter } from 'next/navigation'
 
 export function Pagination({
   total = 0,

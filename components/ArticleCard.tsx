@@ -1,9 +1,9 @@
-import Link from 'next/link'
-import styles from '../styles/ArticleCard.module.css'
-import { formatDate } from '../lib/date'
-import { Article } from '../types/article'
-import { useMemo } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useMemo } from 'react'
+import { formatDate } from '@/lib/date'
+import styles from '@/styles/ArticleCard.module.css'
+import type { Article } from '@/types/article'
 
 export function ArticleCard({ article }: { article: Article }) {
   const authorName = useMemo(() => {
