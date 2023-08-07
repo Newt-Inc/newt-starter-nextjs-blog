@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { SearchField } from '@/components/SearchField'
 import { getApp } from '@/lib/newt'
 import styles from '@/styles/Header.module.css'
@@ -30,7 +31,9 @@ export async function Header() {
             GitHub
           </a>
         </div>
-        <SearchField />
+        <Suspense fallback={<>Search</>}>
+          <SearchField />
+        </Suspense>
       </div>
     </header>
   )
