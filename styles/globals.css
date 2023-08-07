@@ -14,9 +14,6 @@ body {
   height: 100%;
   overflow-wrap: break-word;
 }
-#__next {
-  height: 100%;
-}
 a {
   color: #006cdc;
   text-decoration: underline;
