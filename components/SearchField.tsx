@@ -22,8 +22,8 @@ export function SearchFieldFallback() {
 export function SearchField() {
   const searchParams = useSearchParams()
   const q = searchParams.get('q')
-  const searchRef = useRef<HTMLInputElement>(null)
 
+  const searchRef = useRef<HTMLInputElement>(null)
   const [searchText, setSearchText] = useState(q || '')
 
   const focus = useCallback(() => {
