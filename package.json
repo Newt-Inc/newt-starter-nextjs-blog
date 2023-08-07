@@ -12,7 +12,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier './**/*.{js,jsx,ts,tsx,json}' --write --ignore-path .gitignore"
+    "prettier": "prettier './**/*.{js,jsx,ts,tsx,json,css}' --write --ignore-path .gitignore"
   },
   "dependencies": {
     "html-to-text": "^9.0.5",

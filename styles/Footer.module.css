@@ -39,7 +39,7 @@
   width: 23px;
   height: 23px;
   object-fit: cover;
-  font-family: "object-fit: cover"; /* IE11 */
+  font-family: 'object-fit: cover'; /* IE11 */
   border-radius: 4px;
 }
 .SiteName_Text {

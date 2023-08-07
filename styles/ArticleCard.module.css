@@ -79,7 +79,7 @@
   width: 32px;
   height: 32px;
   object-fit: cover;
-  font-family: "object-fit: cover"; /* IE11 */
+  font-family: 'object-fit: cover'; /* IE11 */
 }
 .Article_AuthorEmpty {
   width: 32px;
