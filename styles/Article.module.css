@@ -79,7 +79,7 @@
   width: 36px;
   height: 36px;
   object-fit: cover;
-  font-family: "object-fit: cover"; /* IE11 */
+  font-family: 'object-fit: cover'; /* IE11 */
 }
 .Article_AuthorData {
   flex: 1;
@@ -213,8 +213,8 @@
   font-size: 1.4rem;
   line-height: 1.6;
   overflow: auto;
-  font-family: "Segoe UI Emoji", "Helvetica Neue", Arial,
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: 'Segoe UI Emoji', 'Helvetica Neue', Arial,
+    'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
 }
 .Article_Body code {
   border: 1px solid #ddd;
@@ -224,8 +224,8 @@
   margin: 0 4px;
   color: #e01d5a;
   font-size: 1.4rem;
-  font-family: "Segoe UI Emoji", "Helvetica Neue", Arial,
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: 'Segoe UI Emoji', 'Helvetica Neue', Arial,
+    'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
 }
 .Article_Body pre code {
   border: none;
@@ -316,7 +316,7 @@
   width: 48px;
   height: 48px;
   object-fit: cover;
-  font-family: "object-fit: cover"; /* IE11 */
+  font-family: 'object-fit: cover'; /* IE11 */
 }
 .Author_Name {
   margin: 0 0 4px 0;
@@ -351,7 +351,7 @@
   height: 100%;
   background: #e5e5e5;
   left: 50%;
-  content: "";
+  content: '';
 }
 .Links_Previous,
 .Links_Next {
