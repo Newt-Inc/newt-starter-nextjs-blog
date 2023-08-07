@@ -8,7 +8,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'ymeguro.assets.newt.so',
+        hostname: `${process.env.NEXT_PUBLIC_NEWT_SPACE_UID}.assets.newt.so`,
       },
     ],
   },
