@@ -12,9 +12,10 @@ Newt's starter
 
 ## 概要
 
-**newt-starter-nextjs-blog**
-<br />Newt を利用したブログ
-<br />技術構成： Next.js, TypeScript
+[Newt](https://www.newt.so/) と [Next.js](https://nextjs.org/) を利用したブログです。<br />
+[App Router](https://nextjs.org/docs/app) を用いて、ブログを作成してみたい方はぜひお試しください。
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNewt-Inc%2Fnewt-starter-nextjs-blog)
 
 ## 開発をはじめる
 
@@ -62,7 +63,7 @@ $ yarn install
 $ yarn dev
 ```
 
-NPM を使う
+npm を使う
 
 ```bash
 # 依存パッケージをインストール
