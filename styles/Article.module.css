@@ -138,6 +138,10 @@
   height: 20px;
   transition: fill 0.2s;
 }
+.Article_ShareList > li > button.Twitter > svg {
+  width: 15px;
+  height: 15px;
+}
 .Article_ShareList > li > button:hover > svg {
   fill: #888;
 }
@@ -250,6 +254,10 @@
     width: 24px;
     height: 24px;
   }
+  .Article_ShareList > li > button.Twitter > svg {
+    width: 18px;
+    height: 18px;
+  }
   .Article_ShareList > li > button {
     padding: 0 0 0 10px;
   }
@@ -288,6 +296,10 @@
   width: 28px;
   height: 28px;
   transition: fill 0.2s;
+}
+.SnsShare_List > li > button.Twitter > svg {
+  width: 21px;
+  height: 21px;
 }
 .SnsShare_List > li > button:hover > svg {
   fill: #888;
