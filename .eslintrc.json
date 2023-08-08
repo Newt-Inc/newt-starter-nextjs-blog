@@ -21,11 +21,6 @@
             "position": "before"
           },
           {
-            "pattern": "react",
-            "group": "external",
-            "position": "before"
-          },
-          {
             "pattern": "**/*.css",
             "group": "type",
             "position": "before"
