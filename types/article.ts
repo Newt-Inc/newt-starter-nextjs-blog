@@ -1,6 +1,6 @@
 import type { Content, Media } from 'newt-client-js'
-import type { Author } from './author'
-import type { Tag } from './tag'
+import type { Author } from '@/types/author'
+import type { Tag } from '@/types/tag'
 
 export interface Article extends Content {
   title: string

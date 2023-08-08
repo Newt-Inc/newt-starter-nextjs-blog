@@ -29,6 +29,11 @@
             "pattern": "**/*.css",
             "group": "type",
             "position": "before"
+          },
+          {
+            "pattern": "@/types/**",
+            "group": "type",
+            "position": "after"
           }
         ],
         "pathGroupsExcludedImportTypes": ["builtin"],
