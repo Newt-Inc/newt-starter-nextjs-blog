@@ -130,3 +130,7 @@ $ npm run dev
 | title         | タイトル           | テキスト         |            |
 | description   | ディスクリプション | テキスト         |            |
 | ogImage       | OG 画像            | 画像             |            |
+
+## License
+
+[MIT License](https://github.com/Newt-Inc/newt-starter-nextjs-blog/blob/main/LICENSE)
