@@ -15,7 +15,7 @@ export async function Footer() {
           )}
           {app.icon?.type === 'image' && (
             <span className={styles.SiteName_Icon}>
-              <Image src={app.icon.value} alt="" width="32" height="32" />
+              <Image src={app.icon.value} alt="" width="23" height="23" />
             </span>
           )}
           <div className={styles.SiteName_Text}>

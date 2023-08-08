@@ -97,8 +97,8 @@ export default async function Page({ params }: Props) {
                   <Image
                     src={article.author.profileImage.src}
                     alt=""
-                    width="32"
-                    height="32"
+                    width="36"
+                    height="36"
                   />
                 ) : (
                   <svg

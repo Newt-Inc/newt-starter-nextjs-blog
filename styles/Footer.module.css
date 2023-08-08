@@ -28,6 +28,8 @@
   text-decoration: underline;
 }
 .SiteName_Icon {
+  width: 18px;
+  height: 30px;
   font-size: 1.6rem;
   margin: 0 8px -2px 0;
   display: flex;

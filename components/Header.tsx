@@ -17,7 +17,7 @@ export async function Header() {
           )}
           {app.icon?.type === 'image' && (
             <span className={styles.Title_Icon}>
-              <Image src={app.icon.value} alt="" width="32" height="32" />
+              <Image src={app.icon.value} alt="" width="26" height="26" />
             </span>
           )}
           <div className={styles.Title_Text}>{app.name || app.uid || ''}</div>

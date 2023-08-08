@@ -81,8 +81,8 @@ export async function Side() {
                   <Image
                     src={author.profileImage.src}
                     alt={author.fullName}
-                    width="32"
-                    height="32"
+                    width="28"
+                    height="28"
                   />
                 ) : (
                   <div className={styles.Authors_Empty}>
