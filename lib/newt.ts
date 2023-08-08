@@ -1,5 +1,5 @@
-import { createClient } from 'newt-client-js'
 import { cache } from 'react'
+import { createClient } from 'newt-client-js'
 import type { Archive, Article } from '@/types/article'
 import type { Author } from '@/types/author'
 import type { Tag, TagWithCount } from '@/types/tag'
