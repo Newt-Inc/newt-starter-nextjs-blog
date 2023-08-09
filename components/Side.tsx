@@ -4,9 +4,9 @@ import { getArchives, getAuthors, getTags } from '@/lib/newt'
 import styles from '@/styles/Side.module.css'
 
 export async function Side() {
-  const { tags } = await getTags()
-  const { archives } = await getArchives()
-  const { authors } = await getAuthors()
+  const tags = await getTags()
+  const archives = await getArchives()
+  const authors = await getAuthors()
 
   return (
     <aside className={styles.Side}>

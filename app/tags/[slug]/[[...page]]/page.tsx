@@ -13,7 +13,7 @@ type Props = {
 }
 
 export async function generateStaticParams() {
-  const { tags } = await getTags()
+  const tags = await getTags()
   const limit = Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) || 10
 
   const params: { slug: string; page?: string[] }[] = []

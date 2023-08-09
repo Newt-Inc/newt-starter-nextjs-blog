@@ -22,7 +22,7 @@ export const getArticles = cache(
   async (
     query?: GetContentsQuery,
   ): Promise<{ articles: Article[]; total: number }> => {
-    const { items, total } = await client.getContents<Article>({
+    const { items: articles, total } = await client.getContents<Article>({
       appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
       modelUid: process.env.NEXT_PUBLIC_NEWT_ARTICLE_MODEL_UID + '',
       query: {
@@ -32,7 +32,7 @@ export const getArticles = cache(
     })
 
     return {
-      articles: items,
+      articles,
       total,
     }
   },
@@ -90,7 +90,7 @@ export const getNextArticle = cache(
   },
 )
 
-export const getTags = cache(async (): Promise<{ tags: TagWithCount[] }> => {
+export const getTags = cache(async (): Promise<TagWithCount[]> => {
   const { items: tags } = await client.getContents<Tag>({
     appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
     modelUid: process.env.NEXT_PUBLIC_NEWT_TAG_MODEL_UID + '',
@@ -125,11 +125,10 @@ export const getTags = cache(async (): Promise<{ tags: TagWithCount[] }> => {
     .sort((a, b) => {
       return b.count - a.count
     })
+    // 上位10件のみ取得
     .slice(0, 10)
 
-  return {
-    tags: popularTags,
-  }
+  return popularTags
 })
 
 export const getTag = cache(async (slug: string): Promise<Tag | null> => {
@@ -145,7 +144,7 @@ export const getTag = cache(async (slug: string): Promise<Tag | null> => {
   return tag
 })
 
-export const getAuthors = cache(async (): Promise<{ authors: Author[] }> => {
+export const getAuthors = cache(async (): Promise<Author[]> => {
   const { items: authors } = await client.getContents<Author>({
     appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
     modelUid: process.env.NEXT_PUBLIC_NEWT_AUTHOR_MODEL_UID + '',
@@ -171,9 +170,7 @@ export const getAuthors = cache(async (): Promise<{ authors: Author[] }> => {
     return getAuthorCount(author) > 0
   })
 
-  return {
-    authors: validAuthors,
-  }
+  return validAuthors
 })
 
 export const getAuthor = cache(async (slug: string): Promise<Author | null> => {
@@ -189,7 +186,7 @@ export const getAuthor = cache(async (slug: string): Promise<Author | null> => {
   return author
 })
 
-export const getArchives = cache(async (): Promise<{ archives: Archive[] }> => {
+export const getArchives = cache(async (): Promise<Archive[]> => {
   const { items: articles } = await client.getContents<{
     _sys: { createdAt: string }
   }>({
@@ -227,7 +224,5 @@ export const getArchives = cache(async (): Promise<{ archives: Archive[] }> => {
       return archive.count > 0
     })
 
-  return {
-    archives,
-  }
+  return archives
 })
