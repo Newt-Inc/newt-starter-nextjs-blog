@@ -1,6 +1,6 @@
 import { createClient } from 'newt-client-js'
 import { cache } from 'react'
-import type { GetContentsQuery } from 'newt-client-js'
+import type { AppMeta, GetContentsQuery } from 'newt-client-js'
 import type { Archive, Article } from '@/types/article'
 import type { Author } from '@/types/author'
 import type { Tag, TagWithCount } from '@/types/tag'
@@ -11,7 +11,7 @@ const client = createClient({
   apiType: process.env.NEXT_PUBLIC_NEWT_API_TYPE as 'cdn' | 'api',
 })
 
-export const getApp = cache(async () => {
+export const getApp = cache(async (): Promise<AppMeta> => {
   const app = await client.getApp({
     appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
   })
@@ -145,7 +145,7 @@ export const getTag = cache(async (slug: string): Promise<Tag | null> => {
   return tag
 })
 
-export const getAuthors = cache(async () => {
+export const getAuthors = cache(async (): Promise<{ authors: Author[] }> => {
   const { items: authors } = await client.getContents<Author>({
     appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
     modelUid: process.env.NEXT_PUBLIC_NEWT_AUTHOR_MODEL_UID + '',
