@@ -38,37 +38,21 @@ export const getArticles = cache(
   },
 )
 
-export const getPages = cache(
-  async (options?: {
-    tag?: string
-    author?: string
-    year?: number
-  }): Promise<{ number: number }[]> => {
-    const { total } = await getArticles(options)
-    const pages = Array(
-      Math.ceil(total / Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) || 10),
-    )
-      .fill(true)
-      .map((_, index) => ({
-        number: index + 1,
-      }))
-    return pages
+export const getArticle = cache(
+  async (slug: string): Promise<Article | null> => {
+    if (!slug) return null
+
+    const article = await client.getFirstContent<Article>({
+      appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
+      modelUid: process.env.NEXT_PUBLIC_NEWT_ARTICLE_MODEL_UID + '',
+      query: {
+        depth: 2,
+        slug,
+      },
+    })
+    return article
   },
 )
-
-export const getArticle = cache(async (slug: string) => {
-  if (!slug) return null
-
-  const article = await client.getFirstContent<Article>({
-    appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
-    modelUid: process.env.NEXT_PUBLIC_NEWT_ARTICLE_MODEL_UID + '',
-    query: {
-      depth: 2,
-      slug,
-    },
-  })
-  return article
-})
 
 export const getPreviousArticle = cache(
   async (currentArticle: Article): Promise<{ slug: string } | null> => {

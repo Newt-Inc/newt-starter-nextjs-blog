@@ -2,7 +2,7 @@ import { ArticleCard } from '@/components/ArticleCard'
 import { Cover } from '@/components/Cover'
 import { Pagination } from '@/components/Pagination'
 import { Side } from '@/components/Side'
-import { getApp, getArticles, getPages } from '@/lib/newt'
+import { getApp, getArticles } from '@/lib/newt'
 import styles from '@/styles/ArticleList.module.css'
 
 type Props = {
@@ -12,9 +12,14 @@ type Props = {
 }
 
 export async function generateStaticParams() {
-  const pages = await getPages()
+  const limit = Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) || 10
+
+  const { total } = await getArticles()
+  const maxPage = Math.ceil(total / limit)
+  const pages = Array.from({ length: maxPage }, (_, index) => index + 1)
+
   return pages.map((page) => ({
-    page: page.number.toString(),
+    page: page.toString(),
   }))
 }
 export const dynamicParams = false

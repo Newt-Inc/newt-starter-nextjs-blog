@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { ArticleCard } from '@/components/ArticleCard'
 import { Pagination } from '@/components/Pagination'
 import { Side } from '@/components/Side'
-import { getArticles, getArchives, getPages } from '@/lib/newt'
+import { getArticles, getArchives } from '@/lib/newt'
 import styles from '@/styles/ArticleList.module.css'
 
 type Props = {
@@ -14,12 +14,20 @@ type Props = {
 
 export async function generateStaticParams() {
   const { archives } = await getArchives()
+  const limit = Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) || 10
+
   const params: { year: string; page?: string[] }[] = []
   await archives.reduce(async (prevPromise, archive) => {
     await prevPromise
-    const pages = await getPages({
-      year: archive.year,
+
+    const { total } = await getArticles({
+      '_sys.createdAt': {
+        gte: archive.year.toString(),
+        lt: (archive.year + 1).toString(),
+      },
     })
+    const maxPage = Math.ceil(total / limit)
+    const pages = Array.from({ length: maxPage }, (_, index) => index + 1)
 
     params.push({
       year: archive.year.toString(),
@@ -28,7 +36,7 @@ export async function generateStaticParams() {
     pages.forEach((page) => {
       params.push({
         year: archive.year.toString(),
-        page: [page.number.toString()],
+        page: [page.toString()],
       })
     })
   }, Promise.resolve())
