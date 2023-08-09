@@ -7,7 +7,9 @@ import styles from '@/styles/ArticleList.module.css'
 
 export default async function Page() {
   const app = await getApp()
-  const { articles, total } = await getArticles()
+  const { articles, total } = await getArticles({
+    limit: Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) || 10,
+  })
   const headingText = 'Recent Articles'
 
   return (

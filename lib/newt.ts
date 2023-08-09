@@ -1,5 +1,6 @@
 import { createClient } from 'newt-client-js'
 import { cache } from 'react'
+import type { GetContentsQuery } from 'newt-client-js'
 import type { Archive, Article } from '@/types/article'
 import type { Author } from '@/types/author'
 import type { Tag, TagWithCount } from '@/types/tag'
@@ -18,57 +19,15 @@ export const getApp = cache(async () => {
 })
 
 export const getArticles = cache(
-  async (options?: {
-    query?: Record<string, any>
-    search?: string
-    tag?: string
-    author?: string
-    year?: number
-    page?: number
-    limit?: number
-  }) => {
-    const { query, search, tag, author, year, page, limit } = options || {}
-    const _query = {
-      ...(query || {}),
-    }
-    if (search) {
-      _query.or = [
-        {
-          title: {
-            match: search,
-          },
-        },
-        {
-          body: {
-            match: search,
-          },
-        },
-      ]
-    }
-    if (tag) {
-      _query.tags = tag
-    }
-    if (author) {
-      _query.author = author
-    }
-    if (year) {
-      _query['_sys.createdAt'] = {
-        gte: new Date(year.toString()).toISOString(),
-        lt: new Date((year + 1).toString()).toISOString(),
-      }
-    }
-    const _page = page || 1
-    const _limit = limit || Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) || 10
-    const _skip = (_page - 1) * _limit
-
+  async (
+    query?: GetContentsQuery,
+  ): Promise<{ articles: Article[]; total: number }> => {
     const { items, total } = await client.getContents<Article>({
       appUid: process.env.NEXT_PUBLIC_NEWT_APP_UID + '',
       modelUid: process.env.NEXT_PUBLIC_NEWT_ARTICLE_MODEL_UID + '',
       query: {
         depth: 2,
-        limit: _limit,
-        skip: _skip,
-        ..._query,
+        ...query,
       },
     })
 

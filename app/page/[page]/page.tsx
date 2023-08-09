@@ -26,8 +26,10 @@ export default async function Page({ params }: Props) {
   const app = await getApp()
   const headingText = 'Recent Articles'
 
+  const limit = Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) || 10
   const { articles, total } = await getArticles({
-    page,
+    limit,
+    skip: limit * (page - 1),
   })
 
   return (

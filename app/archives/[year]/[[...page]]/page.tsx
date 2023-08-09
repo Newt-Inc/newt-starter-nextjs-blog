@@ -46,9 +46,14 @@ export default async function Page({ params }: Props) {
   }
   const headingText = `Articles in ${year}`
 
+  const limit = Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) || 10
   const { articles, total } = await getArticles({
-    year,
-    page,
+    '_sys.createdAt': {
+      gte: year.toString(),
+      lt: (year + 1).toString(),
+    },
+    limit,
+    skip: limit * (page - 1),
   })
 
   return (

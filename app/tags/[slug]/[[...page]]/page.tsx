@@ -46,9 +46,11 @@ export default async function Page({ params }: Props) {
   }
   const headingText = `#${tag.name}`
 
+  const limit = Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) || 10
   const { articles, total } = await getArticles({
-    tag: tag._id,
-    page,
+    tags: tag._id,
+    limit,
+    skip: limit * (page - 1),
   })
 
   return (

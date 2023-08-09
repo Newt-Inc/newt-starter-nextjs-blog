@@ -14,7 +14,14 @@ export default async function Page({ searchParams }: Props) {
 
   const { articles, total } = q
     ? await getArticles({
-        search: q,
+        or: [
+          {
+            title: { match: q },
+          },
+          {
+            body: { match: q },
+          },
+        ],
       })
     : { articles: [], total: 0 }
 
