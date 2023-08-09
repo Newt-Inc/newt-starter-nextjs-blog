@@ -30,7 +30,6 @@ export const getArticles = cache(
         ...query,
       },
     })
-
     return {
       articles,
       total,
