@@ -128,7 +128,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0 0 8px;
+  padding: 0 0 0 10px;
   background: none;
   border: none;
   cursor: pointer;
@@ -257,9 +257,6 @@
   .Article_ShareList > li > button.Twitter > svg {
     width: 18px;
     height: 18px;
-  }
-  .Article_ShareList > li > button {
-    padding: 0 0 0 10px;
   }
 }
 .SnsShare {
