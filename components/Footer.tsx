@@ -18,9 +18,7 @@ export async function Footer() {
               <Image src={app.icon.value} alt="" width="23" height="23" />
             </span>
           )}
-          <div className={styles.SiteName_Text}>
-            {app.name || app.uid || ''}
-          </div>
+          <div className={styles.SiteName_Text}>{app.name || app.uid}</div>
         </Link>
         <div className={styles.Link}>
           <a

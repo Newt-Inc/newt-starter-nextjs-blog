@@ -20,7 +20,7 @@ export async function Header() {
               <Image src={app.icon.value} alt="" width="26" height="26" />
             </span>
           )}
-          <div className={styles.Title_Text}>{app.name || app.uid || ''}</div>
+          <div className={styles.Title_Text}>{app.name || app.uid}</div>
         </Link>
         <div className={styles.Link}>
           <a
