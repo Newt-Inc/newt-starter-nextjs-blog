@@ -10,9 +10,9 @@ export interface Article extends Content {
     description?: string
     ogImage?: Media
   }
-  body?: string
-  coverImage?: Media
-  author?: Author
+  body: string
+  coverImage: Media
+  author: Author
   tags?: Tag[]
 }
 
