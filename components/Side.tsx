@@ -76,7 +76,10 @@ export async function Side() {
         <ul className={styles.Authors}>
           {authors.map((author) => (
             <li key={author._id}>
-              <Link href={`/authors/${author.slug}`}>
+              <Link
+                href={`/authors/${author.slug}`}
+                aria-label={author.fullName}
+              >
                 {author.profileImage?.src ? (
                   <Image
                     src={author.profileImage.src}

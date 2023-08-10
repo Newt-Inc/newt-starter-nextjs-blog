@@ -92,7 +92,11 @@ export default async function Page({ params }: Props) {
           </ul>
           <div className={styles.Article_Row}>
             <div className={styles.Article_Author}>
-              <a href="#" className={styles.Article_Avatar}>
+              <a
+                href="#"
+                className={styles.Article_Avatar}
+                aria-label={article.author.fullName}
+              >
                 {article.author?.profileImage?.src ? (
                   <Image
                     src={article.author.profileImage.src}
@@ -154,7 +158,11 @@ export default async function Page({ params }: Props) {
           </ul>
         </div>
         <aside className={styles.Author}>
-          <a href="#" className={styles.Author_Avatar}>
+          <a
+            href="#"
+            className={styles.Author_Avatar}
+            aria-label={article.author.fullName}
+          >
             {article.author?.profileImage?.src ? (
               <Image
                 src={article.author.profileImage.src}
