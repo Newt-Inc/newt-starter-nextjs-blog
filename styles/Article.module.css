@@ -128,19 +128,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 0 16px 12px;
+  padding: 0 0 0 14px;
   background: none;
   border: none;
   cursor: pointer;
 }
 .Article_ShareList > li > button > svg {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   transition: fill 0.2s;
 }
 .Article_ShareList > li > button.Twitter > svg {
-  width: 18px;
-  height: 18px;
+  width: 21px;
+  height: 21px;
 }
 .Article_ShareList > li > button:hover > svg {
   fill: #888;
