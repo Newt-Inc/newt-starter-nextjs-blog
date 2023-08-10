@@ -12,7 +12,7 @@ export function FacebookShareButton() {
   }
 
   return (
-    <button type="button" onClick={shareOnFacebook}>
+    <button type="button" aria-label="twitter" onClick={shareOnFacebook}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

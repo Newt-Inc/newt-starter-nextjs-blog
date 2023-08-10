@@ -13,7 +13,12 @@ export function TwitterShareButton({ title }: { title: string }) {
   }
 
   return (
-    <button type="button" className={styles.Twitter} onClick={shareOnTwitter}>
+    <button
+      type="button"
+      className={styles.Twitter}
+      aria-label="twitter"
+      onClick={shareOnTwitter}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1200 1227"
