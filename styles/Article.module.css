@@ -134,13 +134,13 @@
   cursor: pointer;
 }
 .Article_ShareList > li > button > svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   transition: fill 0.2s;
 }
 .Article_ShareList > li > button.Twitter > svg {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
 }
 .Article_ShareList > li > button:hover > svg {
   fill: #888;
@@ -249,14 +249,6 @@
   }
   .Article_ShareLabel {
     margin: 0 4px 0 0;
-  }
-  .Article_ShareList > li > button > svg {
-    width: 24px;
-    height: 24px;
-  }
-  .Article_ShareList > li > button.Twitter > svg {
-    width: 18px;
-    height: 18px;
   }
 }
 .SnsShare {
