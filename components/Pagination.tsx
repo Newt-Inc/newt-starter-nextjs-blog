@@ -34,6 +34,7 @@ export function Pagination({
         {pages.map((page) => (
           <li key={page.number} className={styles.Pagination_Item}>
             <button
+              type="button"
               className={`${styles.Pagination_Button} ${
                 page.isCurrent ? styles._current : ''
               }`}
