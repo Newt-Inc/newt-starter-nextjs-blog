@@ -96,7 +96,7 @@
   text-decoration: underline;
 }
 .Article_Date {
-  color: #888;
+  color: #666;
   font-size: 1.4rem;
   line-height: 1.5;
   display: block;
@@ -108,7 +108,7 @@
   margin: 0 0 0 auto;
 }
 .Article_ShareLabel {
-  color: #888;
+  color: #666;
   font-size: 1.2rem;
   margin: 0 2px 0 0;
   line-height: 1;
@@ -268,7 +268,7 @@
   padding: 0 0 48px 0;
 }
 .SnsShare_Label {
-  color: #888;
+  color: #666;
   font-size: 1.4rem;
   margin: 0 16px 0 0;
 }

@@ -60,7 +60,7 @@
   padding: 0 4px;
   list-style: none;
   font-size: 1.2rem;
-  color: #888;
+  color: #666;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
 }
@@ -104,7 +104,7 @@
 .Article_AuthorData time {
   font-size: 1.2rem;
   display: block;
-  color: #888;
+  color: #666;
   line-height: 1.5;
 }
 @media (min-width: 600px) {
