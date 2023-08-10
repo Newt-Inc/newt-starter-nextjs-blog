@@ -60,22 +60,12 @@ export default async function Page({ params }: Props) {
   const prevArticle = await getPreviousArticle(article)
   const nextArticle = await getNextArticle(article)
 
-  const authorName = article?.author?.fullName || 'NO NAME'
-  const publishDate = formatDate(article._sys.createdAt)
-
-  const body = {
-    __html: article?.body || '',
-  }
-  const authorBio = {
-    __html: article?.author?.biography || '',
-  }
-
   return (
     <main className={styles.Container}>
       <article v-if="currentArticle" className={styles.Article}>
         <div className={styles.Article_Cover}>
           <Image
-            src={article.coverImage?.src || ''}
+            src={article.coverImage.src}
             alt=""
             width="1000"
             height="667"
@@ -97,7 +87,7 @@ export default async function Page({ params }: Props) {
                 className={styles.Article_Avatar}
                 aria-label={article.author.fullName}
               >
-                {article.author?.profileImage?.src ? (
+                {article.author.profileImage ? (
                   <Image
                     src={article.author.profileImage.src}
                     alt=""
@@ -120,12 +110,15 @@ export default async function Page({ params }: Props) {
               <div className={styles.Article_AuthorData}>
                 <Link
                   className={styles.Article_AuthorName}
-                  href={`/authors/${article.author?.slug}`}
+                  href={`/authors/${article.author.slug}`}
                 >
-                  {authorName}
+                  {article.author.fullName}
                 </Link>
-                <time dateTime={publishDate} className={styles.Article_Date}>
-                  {publishDate}
+                <time
+                  dateTime={formatDate(article._sys.createdAt)}
+                  className={styles.Article_Date}
+                >
+                  {formatDate(article._sys.createdAt)}
                 </time>
               </div>
             </div>
@@ -144,7 +137,7 @@ export default async function Page({ params }: Props) {
         </div>
         <div
           className={styles.Article_Body}
-          dangerouslySetInnerHTML={body}
+          dangerouslySetInnerHTML={{ __html: article.body }}
         ></div>
         <div className={styles.SnsShare}>
           <p className={styles.SnsShare_Label}>Share this post</p>
@@ -163,7 +156,7 @@ export default async function Page({ params }: Props) {
             className={styles.Author_Avatar}
             aria-label={article.author.fullName}
           >
-            {article.author?.profileImage?.src ? (
+            {article.author.profileImage ? (
               <Image
                 src={article.author.profileImage.src}
                 alt=""
@@ -186,13 +179,13 @@ export default async function Page({ params }: Props) {
           <div className={styles.Author_Text}>
             <Link
               className={styles.Article_AuthorName}
-              href={`/authors/${article.author?.slug}`}
+              href={`/authors/${article.author.slug}`}
             >
-              {authorName}
+              {article.author.fullName}
             </Link>
             <div
               className={styles.Author_Description}
-              dangerouslySetInnerHTML={authorBio}
+              dangerouslySetInnerHTML={{ __html: article.author.biography }}
             ></div>
           </div>
         </aside>

@@ -80,7 +80,7 @@ export async function Side() {
                 href={`/authors/${author.slug}`}
                 aria-label={author.fullName}
               >
-                {author.profileImage?.src ? (
+                {author.profileImage ? (
                   <Image
                     src={author.profileImage.src}
                     alt={author.fullName}

@@ -41,7 +41,7 @@ export default async function Page({ searchParams }: Props) {
                 >
                   <h1 className={styles.Article_Title}>{article.title}</h1>
                   <p className={styles.Article_Description}>
-                    {htmlToText(article.body || '', {
+                    {htmlToText(article.body, {
                       selectors: [{ selector: 'img', format: 'skip' }],
                     })}
                   </p>

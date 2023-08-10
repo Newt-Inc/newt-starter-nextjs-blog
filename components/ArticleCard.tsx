@@ -6,10 +6,6 @@ import styles from '@/styles/ArticleCard.module.css'
 import type { Article } from '@/types/article'
 
 export function ArticleCard({ article }: { article: Article }) {
-  const authorName = useMemo(() => {
-    return article.author?.fullName || 'NO NAME'
-  }, [article])
-
   return (
     <Link className={styles.Article} href={`/articles/${article.slug}`}>
       <div className={styles.Article_Eyecatch}>
@@ -43,7 +39,7 @@ export function ArticleCard({ article }: { article: Article }) {
           ))}
         </ul>
         <div className={styles.Article_Author}>
-          {article.author?.profileImage ? (
+          {article.author.profileImage ? (
             <Image
               src={article.author.profileImage.src}
               alt=""
@@ -65,7 +61,7 @@ export function ArticleCard({ article }: { article: Article }) {
             </div>
           )}
           <div className={styles.Article_AuthorData}>
-            <span>{authorName}</span>
+            <span>{article.author.fullName}</span>
             <time dateTime={formatDate(article._sys.createdAt)}>
               {formatDate(article._sys.createdAt)}
             </time>
