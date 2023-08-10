@@ -24,7 +24,7 @@ export default async function Page() {
                 <ArticleCard key={article._id} article={article} />
               ))}
             </div>
-            <Pagination total={total} current={1} basePath={'page'} />
+            <Pagination total={total} current={1} basePath={'/page'} />
           </main>
           <Side />
         </div>

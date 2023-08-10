@@ -77,7 +77,7 @@ export default async function Page({ params }: Props) {
           <Pagination
             total={total}
             current={page}
-            basePath={`archives/${year}`}
+            basePath={`/archives/${year}`}
           />
         </main>
         <Side />

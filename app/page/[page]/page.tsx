@@ -49,7 +49,7 @@ export default async function Page({ params }: Props) {
                 <ArticleCard key={article._id} article={article} />
               ))}
             </div>
-            <Pagination total={total} current={page} basePath={'page'} />
+            <Pagination total={total} current={page} basePath={'/page'} />
           </main>
           <Side />
         </div>

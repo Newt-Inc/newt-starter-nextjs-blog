@@ -71,7 +71,7 @@ export default async function Page({ params }: Props) {
           <Pagination
             total={total}
             current={page}
-            basePath={`authors/${slug}`}
+            basePath={`/authors/${slug}`}
           />
         </main>
         <Side />
