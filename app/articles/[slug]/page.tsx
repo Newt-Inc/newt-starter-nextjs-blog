@@ -62,7 +62,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <main className={styles.Container}>
-      <article v-if="currentArticle" className={styles.Article}>
+      <article className={styles.Article}>
         <div className={styles.Article_Cover}>
           <Image
             src={article.coverImage.src}
