@@ -4,7 +4,7 @@ import styles from '@/styles/Article.module.css'
 export function TwitterShareButton({ title }: { title: string }) {
   const shareOnTwitter = () => {
     window.open(
-      `https://twitter.com/share?url=${encodeURIComponent(
+      `https://twitter.com/intent/tweet?url=${encodeURIComponent(
         window.location.href,
       )}&text=${encodeURIComponent(title)}`,
       '',
