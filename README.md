@@ -1,14 +1,12 @@
-<p align="center">
-  <a href="https://www.newt.so/">
-    <img src="https://user-images.githubusercontent.com/3859812/155490725-80ed1f06-996e-407f-8f63-fd54f0acaf14.svg" alt="Newt" width="70" height="57" />
-  </a>
-</p>
-<h3 align="center">
-Newt's starter
-</h3>
-<p align="center">
-  <a href="https://newt-starter-nextjs-blog.vercel.app/">Demo</a> | <a href="https://www.newt.so/">Newt</a>
-</p>
+## End of Life Notice
+
+**The Newt headless CMS will be retired on 2026-11-24.**
+
+2026年11月24日（火）をもちまして、Newt株式会社が提供しているヘッドレスCMS「Newt」のサービス提供を終了させていただくこととなりました。
+
+サービス終了後は、管理画面・APIともにご利用いただくことができなくなります。
+
+これまでヘッドレスCMS「Newt」をご支援・ご愛顧いただき、誠にありがとうございました。
 
 ## 概要
 
