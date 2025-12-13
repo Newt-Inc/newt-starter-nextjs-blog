@@ -18,7 +18,7 @@
     "html-to-text": "^9.0.5",
     "luxon": "^3.3.0",
     "newt-client-js": "^3.3.7",
-    "next": "14.2.32",
+    "next": "14.2.35",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
