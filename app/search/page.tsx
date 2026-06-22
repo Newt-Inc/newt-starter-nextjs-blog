@@ -4,13 +4,13 @@ import { getArticles } from '@/lib/newt'
 import styles from '@/styles/Search.module.css'
 
 type Props = {
-  searchParams: {
+  searchParams: Promise<{
     q?: string
-  }
+  }>
 }
 
 export default async function Page({ searchParams }: Props) {
-  const { q } = searchParams
+  const { q } = await searchParams
 
   const { articles, total } = q
     ? await getArticles({

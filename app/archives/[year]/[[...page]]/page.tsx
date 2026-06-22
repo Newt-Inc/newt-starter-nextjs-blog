@@ -6,10 +6,10 @@ import { getArticles, getArchives } from '@/lib/newt'
 import styles from '@/styles/ArticleList.module.css'
 
 type Props = {
-  params: {
+  params: Promise<{
     year: string
     page?: string[]
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -45,7 +45,7 @@ export async function generateStaticParams() {
 export const dynamicParams = false
 
 export default async function Page({ params }: Props) {
-  const { year: _year, page: _page } = params
+  const { year: _year, page: _page } = await params
   const page = Number(_page) || 1
 
   const year = Number(_year)

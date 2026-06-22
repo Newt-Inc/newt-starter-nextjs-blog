@@ -6,10 +6,10 @@ import { getArticles, getTags, getTag } from '@/lib/newt'
 import styles from '@/styles/ArticleList.module.css'
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string
     page?: string[]
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -42,7 +42,7 @@ export async function generateStaticParams() {
 export const dynamicParams = false
 
 export default async function Page({ params }: Props) {
-  const { slug, page: _page } = params
+  const { slug, page: _page } = await params
   const page = Number(_page) || 1
 
   const tag = await getTag(slug)
